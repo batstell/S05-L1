@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Inteligentes - Inatel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>Eventos Inteligentes</h1>
+        <p>Receba alertas automáticos sobre eventos próximos</p>
+    </header>
+
+    <section class="switch-area">
+        <label class="switch">
+            <input type="checkbox" id="toggleNotificacoes">
+            <span class="slider"></span>
+        </label>
+        <span id="statusTexto">Notificações desativadas</span>
+    </section>
+
+    <section class="lista-eventos">
+        <h2>Eventos de Hoje</h2>
+        <div id="eventosContainer"></div>
+    </section>
+
+</div>
+
+<!-- Notificação simulada -->
+<div id="notificacao" class="notificacao hidden">
+    <h3 id="tituloNotif"></h3>
+    <p id="descNotif"></p>
+    <button onclick="fecharNotificacao()">Fechar</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
