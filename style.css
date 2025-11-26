@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f7ff;
+}
+
+.app {
+    max-width: 480px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #0041c4;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #444;
+    font-size: 14px;
+}
+
+.switch-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0041c4;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.lista-eventos h2 {
+    color: #0041c4;
+    margin-bottom: 10px;
+}
+
+.evento-card {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.evento-card h3 {
+    margin: 0;
+    color: #003399;
+}
+
+.evento-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.btn-participar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #0041c4;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-participar:hover {
+    background: #002e8f;
+}
+
+.notificacao {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0041c4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.notificacao.hidden {
+    display: none;
+}
